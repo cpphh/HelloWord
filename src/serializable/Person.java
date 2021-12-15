@@ -45,7 +45,11 @@ public class Person implements Serializable{
 		
 		Person person = new Person(2,"cuong");
 		
-		File file = new File("demo.txt");
+		File dir = new File("ghifile");
+		if(!dir.exists())
+			dir.mkdir();
+		
+		File file = new File("ghifile/demo.txt");
 		if(!file.exists())
 			file.createNewFile();
 		

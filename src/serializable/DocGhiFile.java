@@ -19,7 +19,11 @@ public class DocGhiFile {
 		list.add(new Person(1,"tuan"));
 		list.add(new Person(4,"tung"));
 		
-		File file = new File("filedemo.txt");
+		File dir = new File("ghifile");
+		if(!dir.exists())
+			dir.mkdir();
+		
+		File file = new File("ghifile/filedemo.txt");
 		if(!file.exists())
 			file.createNewFile();
 		
